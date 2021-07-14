@@ -1,0 +1,308 @@
+.chatHeader {
+    background-color: black;
+    width: 100%;
+}
+
+.chatHeader h3 {
+    font-weight: 200;
+    font-size: 22px;
+    padding: 10px 0 0 10px;
+}
+
+.chatHeader p {
+    font-weight: 200;
+    color: #818181;
+    padding: 10px 0 10px  10px;
+}
+
+.chatBottom {
+    position: absolute;
+    
+    padding-bottom: 20px;
+    display: flex;
+    width: 90%;
+
+    bottom: 15px;
+    left: 50%; /* Position X halfway in */
+    transform: translate(-50%, 0%); /* Move it halfway back(x,y) */
+
+    margin: 0;
+    padding: 0;
+}
+
+.chatBottom form {
+    width: 100%;
+}
+
+.chatBottom input {
+    /* Input Fix */
+    width: 98%;
+    display: block;
+    margin: 0 auto;
+
+    /* Input design */
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #111111;
+    color: white;
+
+    outline: none;
+
+    font-size: 17px;
+    font-weight: 200;
+    padding-left: 5px;
+}
+
+.chatBottom button {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    line-height: 0;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 3px;
+    right: 5px;
+}
+
+.chatInputIndicator {
+    background-color: #232323;
+    box-shadow: 0px -5px 20px rgb(24, 24, 24);;
+    width: 100%;
+    height: 70px;
+
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    
+}
+
+.message {
+    width: 55%;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.currentMessage {
+    float: right;
+}
+
+.currentMessage .messageUsername {
+    display: none;
+}
+
+.currentMessage .messageContent {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.messageContent {
+    background-color: #111111;
+    padding: 10px;
+
+    border-radius: 20px;
+}
+
+.messageUsername {
+    color: #818181;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.cpModal
+{
+    /* COLORS */
+    background-color: #0F0F0F;
+    width: 90%;
+    margin: 0 auto;
+    
+    border-radius: 20px;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* MAX WIDTH */
+    max-width: 500px;
+
+}
+
+.cpModal h2
+{
+    font-weight: 200;
+    margin: 0 0 12px 0;
+}
+
+.cpContent
+{
+   padding: 10px 15px 15px 15px;
+}
+
+.cpClose
+{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    line-height: 0;
+
+
+    position: absolute;
+    right: 8px;
+    top: 14px;
+
+    cursor: pointer;
+}
+
+.cpDescription
+{
+
+    font-family: 'Cairo', sans-serif;
+    background-color: #303030;
+    color: white;
+
+    width: 100%;
+    
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    
+    resize: none;
+    line-height: 20px;
+
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 10px;
+
+    height: 120px;
+}
+
+.cpDescription::placeholder
+{
+    color: rgb(194, 194, 194);
+}
+
+.cpBtn
+{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 18px;
+    line-height: 0;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cpBtn:focus
+{
+    color: grey;
+}
+
+.cpBtn:hover
+{
+    color: grey;
+}
+
+.cpBtnImage
+{
+    position: absolute;
+    top: 145px;
+    right: 22px;
+}
+
+.cpBtnEmoji
+{
+    position: absolute;
+    top: 145px;
+    right: 60px;
+}
+
+.cpHidden
+{
+    display: none;
+}
+
+.cpSubmitBtn
+{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    margin: 0 auto 0 auto;
+
+    cursor: pointer;
+}
+
+.cpUploadedImg
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+
+.modalBackground
+{
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(49, 45, 45, 0.829);
+    width: 100%;
+    height: 100%;
+    font-family: 'Cairo', sans-serif;
+}
+
+.input-res
+{
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: 15px 'Cairo', sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-width: 500px;
+  background-color: #303030;
+  border: none;
+  padding: 5px 11px 5px 11px;
+  border-radius: 15px;
+  box-shadow: none;
+  outline: none;
+  box-sizing: border-box;
+  margin: 7px auto;
+  font-weight: 600;
+}
+
+.cpContent h2 {
+    line-height: 30px;
+}
+
+.cpContent p {
+    line-height: 15px;
+    color: rgb(182, 182, 182);
+}
