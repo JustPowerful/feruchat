@@ -25,9 +25,30 @@ io.on('connection', (socket) => {
         console.log(rooms)
     })
 
-    socket.on('user-login', data => {
-        rooms[data.roomname]["users"][socket.id] = data.username
-        
+    socket.on('new-user', (roomname, username) => {
+        socket.join(roomname)
+        rooms[roomname]["users"][socket.id] = username
+        socket.broadcast.to(roomname).emit('user-connected', username)
+        console.log(rooms)
+    })
+
+    socket.on('send-chat-message', (roomname, message) => {
+        socket.broadcast.to(roomname).emit('chat-message', {message: message, username: rooms[roomname].users[socket.id]})
+    })
+
+    socket.on('disconnect', () => {
+        getUserRooms(socket).forEach(roomname => {
+            socket.broadcast.to(roomname).emit('user-disconnected', rooms[roomname].users[socket.id])
+            delete rooms[roomname].users[socket.id]
+        })
         console.log(rooms)
     })
 })
+
+function getUserRooms(socket)
+{
+    return Object.entries(rooms).reduce((usernames, [username, roomname]) => {
+        if(roomname.users[socket.id] != null) usernames.push(username)
+        return usernames
+    }, [])
+}
