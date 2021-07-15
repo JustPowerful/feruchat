@@ -7,12 +7,15 @@
     font-weight: 200;
     font-size: 22px;
     padding: 10px 0 0 10px;
+    text-transform: capitalize;
 }
 
 .chatHeader p {
     font-weight: 200;
     color: #818181;
     padding: 10px 0 10px  10px;
+    text-align: left;
+    
 }
 
 .chatBottom {
@@ -305,4 +308,8 @@
 .cpContent p {
     line-height: 15px;
     color: rgb(182, 182, 182);
+}
+
+.chatHeader p {
+
 }

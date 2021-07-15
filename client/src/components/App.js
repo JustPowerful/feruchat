@@ -1,10 +1,26 @@
 import Chat from './Chat'
+import Index from './Index'
 import './css/App.css'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+
 function App() {
   return (
-    <div className="App">
-      <Chat/>
-    </div>
+    <Router>
+      <Switch>
+
+        <Route path="/" exact>
+          <Index/>
+        </Route>
+
+        <Route path="/room/:roomname" component={Chat} exact/>
+
+      </Switch>
+    </Router>
   );
 }
 

@@ -1,0 +1,19 @@
+h1, h2, p {
+    font-weight: 200;
+    text-align: center;
+}
+
+.roomForm {
+    padding: 15px 30px;
+    background-color: #0F0F0F;
+    text-align: center;
+}
+
+button {
+    border: none;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 15px;
+}

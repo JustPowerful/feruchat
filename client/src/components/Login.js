@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function Login(props)
 {
-    const [username, setUsername] = useState(null)
+    const [username, setUsername] = useState(undefined)
 
     function handleChange(event) {
         setUsername(event.target.value)
