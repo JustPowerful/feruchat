@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import './css/Chat.css'
 import { FiSend } from 'react-icons/fi'
@@ -10,8 +10,13 @@ import Login from './Login'
 import socket from '../models/socket'
 import { useParams } from 'react-router-dom'
 
+import { animateScroll } from 'react-scroll'
+
 function Chat()
 {
+    
+    
+
     // states
     const [users, setUsers] = useState([])
     const [toggleLogin, setToggleLogin] = useState(false)
@@ -19,6 +24,13 @@ function Chat()
     const [messages, setMessages] = useState([])
     const [currentMessage, setCurrentMessage] = useState('')
 
+    function scrollToBottom() {
+        animateScroll.scrollToBottom({
+            containerId: "chatContent"
+        })
+    }
+
+    useEffect(scrollToBottom, [messages])
 
     useEffect(() => {
         // If user connected
@@ -36,7 +48,12 @@ function Chat()
             // console.log(message.message, message.username)
             setMessages(m => ([...m, {username: message.username, content: message.message, current: false}]))
         })
+
+
+
     }, [])
+
+    
 
     // url parameters
     const { roomname } = useParams() 
@@ -70,34 +87,22 @@ function Chat()
             }
 
             <div className="chat">
+
                 <div className="chatHeader">
                     <h3>{roomname}</h3>
                     <p>{users.join(', ')}</p>
                 </div>
     
-                <div className="chatContent">
-                        
-    
-                        {/* This is a message sent from the current user */}
-                        {/* <Message username="user1" content="Welcome to our chat website here you can have fun!"/>
-                        <Message username="user2" content="Nice lemme try!" isCurrent={true}/> */}
+                
+                <div className="chatContent" id="chatContent">
                         {
                             messages.map(message => (
                                 <Message username={message.username} content={message.content} isCurrent={message.current}/>
                             ))
                             
                         }
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/><br/>
-                        
-                        
-                        
                 </div>
+                
 
                 
                     <div className="chatBottom">
@@ -107,7 +112,7 @@ function Chat()
                         </form>
                     </div>
                     {/* Just for box shadow */}
-                    <div className="chatInputIndicator"></div>
+                    {/* <div className="chatInputIndicator"></div> */}
                 
             </div>
         </>
