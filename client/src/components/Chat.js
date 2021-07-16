@@ -90,7 +90,6 @@ function Chat()
 
                 <div className="chatHeader">
                     <h3>{roomname}</h3>
-                    <p>{users.join(', ')}</p>
                 </div>
     
                 
