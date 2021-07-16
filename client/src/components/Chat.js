@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import './css/Chat.css'
 import { FiSend } from 'react-icons/fi'
@@ -18,7 +18,6 @@ function Chat()
     
 
     // states
-    const [users, setUsers] = useState([])
     const [toggleLogin, setToggleLogin] = useState(false)
 
     const [messages, setMessages] = useState([])

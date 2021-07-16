@@ -1,5 +1,7 @@
 import socketIOClient from 'socket.io-client'
-const serverEndpoint = "http://localhost:3001";
+const url = window.location.hostname
+const serverEndpoint = "http://" + url + ":3001";
+console.log(serverEndpoint)
 const socket = socketIOClient(serverEndpoint, {
     transports: ['websocket']
 })
