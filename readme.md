@@ -1,5 +1,5 @@
 # Feruchat
-`Note: the css is only made for iphone x so you'll encounter some css bugs.`
+`Note: the css is still in development, you'll encounter some css bugs, but the chat is functional.`
 #### Description:
 Feruchat is an open-source chat version of my old project 'feruferu' written in React and socket.io
 if you want to implement other features you can collaborate, its free to use and open-source.
