@@ -1,3 +1,5 @@
+@import './Global';
+
 h1, h2, p {
     font-weight: 200;
     text-align: center;
@@ -12,7 +14,7 @@ h1, h2, p {
 button {
     border: none;
     font-size: 18px;
-    background-color: red;
+    background-color: $primary-color;
     color: white;
     padding: 8px 20px;
     border-radius: 15px;
