@@ -5,12 +5,15 @@ Feruchat is an open-source chat version of my old project 'feruferu' written in 
 if you want to implement other features you can collaborate, its free to use and open-source.
 
 #### How to use: 
-This project uses `concurrently`, so you can run backend and frontend in the same command.
+- This project uses `concurrently`, so you can run backend and frontend in the same command
 You just have to change your directory location to `/backend` by typing `cd backend` and then you just have to run `npm run start`
+- You can also edit global values in `Global.scss` like colors, border-radius of the chat messages (safe to edit)
+
 
 #### Used libraries:
 - Socket.io (Backend)
 - React (Frontend)
+- React-sass (Syntactically Awesome Style Sheets)
 - React-icons
 - React-scroll
 
