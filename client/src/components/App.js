@@ -1,6 +1,6 @@
 import Chat from './Chat'
 import Index from './Index'
-import './css/App.css'
+import './css/App.scss'
 
 import {
   BrowserRouter as Router,

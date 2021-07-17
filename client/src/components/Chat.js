@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import './css/Chat.css'
+import './css/Chat.scss'
 import { FiSend } from 'react-icons/fi'
 
 import Message from './Message'

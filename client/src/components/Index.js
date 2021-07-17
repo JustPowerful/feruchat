@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import socket from '../models/socket'
 
-import './css/Chat.css'
-import './css/Index.css'
+import './css/Chat.scss'
+import './css/Index.scss'
 
 function Index(){
     const [roomname, setRoomname] = useState('')

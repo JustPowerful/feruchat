@@ -1,6 +1,4 @@
-* {
-    --border-radius: 20px;
-}
+@import './Global';
 
 .chat {
     margin: 0;
@@ -60,7 +58,7 @@
 }
 
 .chatBottom button {
-    background-color: #FF0000;
+    background-color: $primary-color;
     color: #FFFFFF;
     border: none;
     outline: none;
@@ -74,18 +72,6 @@
     right: 5px;
 }
 
-.chatInputIndicator {
-    background-color: #232323;
-    box-shadow: 0px -5px 20px rgb(24, 24, 24);;
-    width: 100%;
-    height: 70px;
-
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    
-}
-
 .message {
     display: inline-block;
     width: 55%;
@@ -94,19 +80,15 @@
     margin-top: 15px;
 }
 
-
-
-
 .messageContent {
     background-color: #111111;
     padding: 10px;
 
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
     margin-bottom: 15px;
 }
-
 
 .currentMessage {
     float: right;
@@ -117,14 +99,14 @@
 }
 
 .currentMessage .messageContent {
-    background-color: rgb(255, 0, 0);
+    background-color: $primary-color;
     color: rgb(255, 255, 255);
     border-bottom-right-radius: 0px;
-    border-bottom-left-radius: var(--border-radius);
+    border-bottom-left-radius: $border-radius;
 }
 
 .messageUsername {
-    color: #818181;
+    color: $username-color;
     margin-left: 15px;
 }
 
