@@ -1,3 +1,7 @@
+* {
+    --border-radius: 20px;
+}
+
 .chat {
     margin: 0;
     display: flex;
@@ -90,6 +94,20 @@
     margin-top: 15px;
 }
 
+
+
+
+.messageContent {
+    background-color: #111111;
+    padding: 10px;
+
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+
 .currentMessage {
     float: right;
 }
@@ -101,13 +119,8 @@
 .currentMessage .messageContent {
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
-}
-
-.messageContent {
-    background-color: #111111;
-    padding: 10px;
-
-    border-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: var(--border-radius);
 }
 
 .messageUsername {
